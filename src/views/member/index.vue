@@ -1,5 +1,11 @@
 <template>
   <div>
+    <div class="memberTitle">
+      <el-breadcrumb separator="/">
+        <el-breadcrumb-item :to="{ path: '/member' }">成员管理</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
+    
     <el-table :data="userList" style="width: 100%">
       <el-table-column prop="create_time" label="申请时间" width="165"> </el-table-column>
       <el-table-column prop="name" label="姓名" width="80"> </el-table-column>
@@ -132,6 +138,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.memberTitle {
+  margin: 10px 0 20px 0;
+}
 .status {
   margin-right: 15px;
   display: inline-block;

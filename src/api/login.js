@@ -4,7 +4,7 @@ import { Message } from 'element-ui';
 import axios from 'axios';
 
 export const login = (params) => {
-  let requestUrl = '/get-user';
+  let requestUrl = '/is-admin';
   return $http.post(requestUrl, params)
 }
 

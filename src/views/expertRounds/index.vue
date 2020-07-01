@@ -1,5 +1,10 @@
 <template>
   <div class="expertRounds">
+    <div class="memberTitle">
+      <el-breadcrumb separator="/">
+        <el-breadcrumb-item :to="{ path: '/expert' }">查房</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
     <el-table :data="meetingList" style="width: 100%">
       <el-table-column prop="check_room_hospital" label="查房医院"> </el-table-column>
       <el-table-column prop="check_room_data" label="查房日期" width="110"> </el-table-column>
@@ -80,6 +85,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.memberTitle {
+  margin: 10px 0 20px 0;
+}
 .expertRounds {
   .el-table {
     padding: 10px;

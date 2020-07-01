@@ -1,24 +1,41 @@
-
+import Layout from '@/components/layout';
 const routes = [
     {
-        path: '/',
-        component: resolve=>(require(["@/views/home"],resolve)),
+      path: '/',
+      component: Layout,
+      children: [
+        {
+          path: '/',
+          name: 'Home',
+          component:resolve=>(require(["@/views/home"],resolve)),
+        }
+      ]
     },
     {
       path: '/login',
       component: resolve=>(require(["@/views/login"],resolve)),
     },
     {
-      path: '/register',
-      component: resolve=>(require(["@/views/login/register"],resolve)),
-    },
-    {
       path: '/expert',
-      component: resolve=>(require(["@/views/expertRounds"],resolve)),
+      component: Layout,
+      children: [
+        {
+          path: '/expert',
+          name: 'expert',
+          component: resolve=>(require(["@/views/expertRounds"],resolve)),
+        }
+      ]
     },
     {
       path: '/member',
-      component: resolve=>(require(["@/views/member"],resolve)),
+      component: Layout,
+      children: [
+        {
+          path: '/member',
+          name: 'member',
+          component: resolve=>(require(["@/views/member"],resolve)),
+        }
+      ]
     },
     // {
     //   path: '/meetingInfo',
