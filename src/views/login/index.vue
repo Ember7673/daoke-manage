@@ -10,7 +10,7 @@
         hide-required-asterisk
       >
         <el-form-item prop="account">
-          <el-input v-model="loginForm.account" placeholder="请输入手机号">
+          <el-input v-model="loginForm.account" placeholder="请输入用户名">
             <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
           </el-input>
         </el-form-item>
